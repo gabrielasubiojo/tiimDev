@@ -94,7 +94,7 @@ input[type=text] {
   height: 200px;
   margin-top: 30px;
   margin-bottom: 20px;
-  margin-left: 8px;
+  margin-left: 25px;
 }
 
 .htmlBox h3 {
@@ -181,13 +181,12 @@ input[type=text] {
   justify-content: space-between;
   border: none;
   border-radius: 5px;
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.219);
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 50px;
-  box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.082);
+  box-shadow: 0px 1px 5px 2px rgba(0, 0, 0, 0.055);
 }
 
 .htmlBox p,
@@ -212,7 +211,7 @@ input[type=text] {
 /***************** Footer *************/
 footer {
   font-size: 0.7rem;
-  padding: 10px 25px;
+  padding: 8px;
   margin-top: 80px;
   background-color: rgba(127, 128, 216, 0.247);
   text-align: center;
@@ -230,7 +229,7 @@ footer {
   font-style: normal;
   text-decoration: none;
   line-height: 1.5rem;
-  padding: 2px 10px;
+  padding: 10px 15px;
 }
 
 .copyright {
