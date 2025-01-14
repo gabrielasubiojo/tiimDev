@@ -8,7 +8,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: Arial;
-  background-image: url('/images/backimage.jpg');
+  background-color: #33333328;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
@@ -22,6 +22,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 0px;
 }
 
 .aboutContainer {
@@ -30,11 +31,11 @@ body {
 
 h1 {
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 23px;
   /* background: linear-gradient(to right, rgb(187, 255, 0), rgb(252, 61, 3));
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text; */
-  color: rgb(255, 238, 0);
+  color: rgb(233, 233, 233);
   background-image: linear-gradient(to bottom left, rgba(0, 0, 255, 0.918), rgb(253, 252, 249));
   text-align: center;
   padding: 20px 50px;
@@ -49,13 +50,14 @@ h1 {
 p {
   font-family: "Poppins", sans-serif;
   text-align: center;
+  background-color: aliceblue;
   border: none;
   border-radius: 8px;
   box-shadow: 0px 1px 8px 2px rgba(56, 40, 199, 0.308);
   border-width: 80%;
   padding: 50px 25px;
-  font-size: 18px;
-  line-height: 1.8rem;
+  font-size: 22px;
+  line-height: 2.5rem;
   position: relative;
 }
 

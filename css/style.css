@@ -16,45 +16,95 @@ body {
 }
 
 /***************** Top-bar *************/
-.logo {
-  width: 60px;
-  height: 60px;
-  object-fit: fill;
-  border-radius: 100%;
-}
-
-.menu-icon div {
-  width: 25px;
-  height: 4px;
-  background-color: rgb(24, 38, 116);
-  margin: 5px 0;
-}
-
-.menu {
-  width: 20px;
-  height: 20px;
-}
-
-.topbar-background {
-  padding: 5px;
-}
-
-.top-bar {
-  height: 80px;
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
-  padding: 0 10px;
+  color: rgb(255, 255, 255);
+  padding: 0.5em 1em;
+  background-color: rgba(255, 255, 255, 0.952);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.068);
 }
 
-li {
-  display: none;
+.logo {
+  width: 70px;
+  height: 75px;
+  object-fit: fill;
+  border-radius: 100%;
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+  box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.082);
 }
 
-input[type=text] {
-  display: none;
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
+
+.nav-menu ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 4.5em;
+}
+
+.nav-menu ul div a {
+  font-family: "Poppins", sans-serif;
+  color: rgb(16, 11, 85);
+  text-decoration: none;
+  font-size: 1em;
+  cursor: pointer;
+  line-height: 2em;
+  background: linear-gradient(to left, rgb(56, 23, 134), rgb(59, 26, 245));
+  -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.nav-menu ul div a:hover {
+  background: linear-gradient(to left, rgba(138, 107, 212, 0.74), rgba(145, 134, 197, 0.603));
+  -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: 0.5s;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2; /* Keep it above the menu */
+}
+
+.menu-icon .bar {
+  width: 25px;
+  height: 2px;
+  background-color: rgb(19, 8, 80);
+ /*  transition: transform 0.3s ease, opacity 0.3s ease; */
+}
+
+/* Open/Close Animation for Menu Icon */
+.menu-icon.active .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.menu-icon.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.active .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Responsive Styles */
+
 
 /***************** Hero *************/
 .hero-section {
@@ -92,6 +142,7 @@ input[type=text] {
 .skillHero {
   width: 350px;
   height: 200px;
+  border-radius: 100%;
   margin-top: 30px;
   margin-bottom: 20px;
   margin-left: 25px;
@@ -214,39 +265,78 @@ input[type=text] {
 /***************** Footer *************/
 footer {
   font-size: 0.7rem;
-  padding: 8px;
+  padding: 10px;
   margin-top: 80px;
   background-color: rgba(127, 128, 216, 0.247);
   text-align: center;
 }
 
-.footer {
-  width: 100%;
-  margin-bottom: 0px;
-}
-
-.footer a {
-  color: black;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  text-decoration: none;
-  line-height: 1.5rem;
-  padding: 10px 15px;
-}
-
 .copyright {
-  font-size: 0.5rem;
+  font-size: 0.7rem;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-style: italic;
   text-align: center;
 }
 
 
 /***************** MEDIA QUERY *************/
 
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background-image: linear-gradient(to bottom left, rgba(0, 0, 0, 0.911), rgb(108, 122, 199));
+    border-bottom: none;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0;
+    gap: 1em;
+    transition: transform 0.1s ease, opacity 0.3s ease;
+  }
+
+  .nav-menu ul div a {
+    color: rgb(255, 255, 255);
+    margin-right: 30px;
+    background: linear-gradient(to left, rgb(255, 255, 255), rgb(255, 255, 255));
+    -webkit-text-fill-color: transparent;
+      background-clip: text;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  input {
+    display: none;
+  }
+}
+
+
 @media (min-width: 768px) {
+
+  .nav-menu ul li a:hover {
+    display: none;
+  }
+
   .container {
     width: 690px;
   }
@@ -255,10 +345,6 @@ footer {
     margin-bottom: 70px;
     padding-left: 70px;
     text-align: start;
-  }
-
-  li{
-    display: none;
   }
 
   .skillHero {
@@ -339,17 +425,32 @@ footer {
 
 @media (min-width: 1200px) {
 
-  .header {
-    background-image: none;
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1b8fa31f;
+    border-radius: 100px;
+    border: 1px solid rgba(52, 52, 92, 0.199);
+    padding: 0.5em 1em;
+    margin-top: 10px;
+    box-shadow: 1px 1px 8px 1px rgba(40, 10, 150, 0.116);
   }
 
+  input {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    padding: 6px 10px;
+    border: none;
+    border-radius: 100px;
+    box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.116);
+  }
+
+  .menu-icon {
+    display: none;
+  }
 
   .container {
     width: 1170px;
-  }
-
-  .menu-icon div {
-    display: none;
   }
 
   .skillHero {
@@ -375,51 +476,6 @@ footer {
     gap: 35px;
   }
 
-  .pl {
-    margin-bottom: 10px;
-  }
-
-  .topbar-background {
-    background-color: rgba(103, 190, 212, 0.452);
-    /* background-image: url("/images/blue-bkground.webp"); */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 0px;
-    margin-top: 20px;
-  }
-
-  li{
-    display: block;
-  }
-
-  li a {
-    color: rgb(16, 16, 94);
-    text-decoration: none;
-    padding: 0px 20px;
-    text-align: center;
-    font-size: 13px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-  }
-
-  li a:hover {
-    color: rgba(66, 146, 216, 0.822);
-    transition: 0.5s;
-  }
-
-  input[type=text] {
-    display: block;
-    float: right;
-    padding: 5px;
-    padding-left: 10px;
-    border: none;
-    margin-top: 8px;
-    margin-right: 18px;
-    font-size: 15px;
-    border-radius: 50px;
-  }
-
   .hero-section {
     background-image: none;
     display: flex;
@@ -435,7 +491,7 @@ footer {
     border-top-right-radius: 100%;
     border-bottom-right-radius: 100px;
     padding-bottom: 45px;
-    margin-top: 65px;
+    margin-top: 39px;
   }
 
   .flexDesktop-hero a {
@@ -451,6 +507,7 @@ footer {
     padding: 4px 12px;
     margin-bottom: 90px;
     cursor: pointer;
+    box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, 0.178);
   }
 
   .flexDesktop-hero a:hover {
@@ -479,6 +536,9 @@ footer {
     font-size: 50px;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
+    background: linear-gradient(to right, rgb(33, 6, 95), rgb(252, 252, 252));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
   .hero-section p {
