@@ -3,12 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/contact.css" />
     <title>Contact Page</title>
   </head>
 
   <body>
-    <div>
-      <h1>Contact Me</h1>
+    <div class="container">
+      <div class="contact-container">
+        <form action="" class="contact-left">
+          <div class="contact-left-title">
+            <h2>Get in touch</h2>
+            <hr />
+          </div>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            class="contact-inputs"
+            required
+          />
+          <input
+            type="text"
+            name="email"
+            placeholder="Your Email"
+            class="contact-inputs"
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            class="contact-inputs"
+            required
+          ></textarea>
+          <a href="#"><button type="submit">Submit</button></a>
+        </form>
+        <form action="" class="contact-right">
+          <img src="" alt="An image" />
+        </form>
+      </div>
     </div>
   </body>
 </html>

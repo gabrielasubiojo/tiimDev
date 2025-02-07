@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom left, rgba(202, 170, 63, 0.349), rgb(253, 252, 249));
+  background-repeat: no-repeat;
+}
+
+.contact-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: none;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.281);
+}
+
+.contact-left-title h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  color: rgb(0, 89, 255);
+  margin-bottom: 0px;
+}
+
+input {
+  font-family: "Poppins", sans-serif;
+  border: none;
+  border-radius: 5px;
+  padding-right: 50px;
+  padding-left: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1rem;
+}
+
+textarea {
+  padding-top: 5px;
+  padding-bottom: 30px;
+  padding-right: 85px;
+  padding-left: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+a button {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  background-color: rgba(31, 53, 153, 0.719);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+
+a button:hover {
+  background-color: rgba(255, 0, 0, 0.493);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+a button:active {
+  background-color: rgb(0, 163, 0);
+}
+
+.contact-right {
+  display: none;
+}
+
+/*---------- MEDIA QUERY ----------*/
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 120px;
+  }
+
+  .contact-left-title h2 {
+    font-size: 2.5rem
+  }
+
+  .contact-right {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+
+  .contact-left-title h2 {
+    font-size: 3rem
+  }
+
+  .contact-right {
+    display: inline-block;
+  }
+
+  .contact-left {
+    align-items: start;
+    border: none;
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.281);
+  }
+}

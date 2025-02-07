@@ -15,6 +15,47 @@ body {
   height: 100%;
 }
 
+.header {
+  background-image: url("/images/blue-bkground.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: sticky;
+  top: 0px;
+  z-index: 999999;
+  margin-bottom: 50px;
+}
+
+.centerHeader {
+  text-align: start;
+  padding: 5px;
+}
+
+.header h1 {
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+  width:500px;
+}
+
+.header p {
+  font-size: 17px;
+  color: rgb(219, 219, 49);
+  text-align: center;
+}
+
+a button {
+  font-family: sans-serif;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 3px 10px;
+  border-radius: 10px;
+  margin-left: 400px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
 /***************** Top-bar *************/
 .logo {
   width: 60px;
@@ -251,6 +292,10 @@ footer {
     width: 690px;
   }
 
+  a button {
+    display: none;
+  }
+
   .hero-section {
     margin-bottom: 70px;
     padding-left: 70px;
@@ -338,6 +383,10 @@ footer {
 }
 
 @media (min-width: 1200px) {
+  a button {
+    display: none;
+  }
+  
   .header {
     background-image: url("/images/blue-bkground.webp");
     background-repeat: no-repeat;
@@ -351,6 +400,7 @@ footer {
 
   .header h1 {
     color: #fff;
+    width: 100%;
   }
 
   .header p {
