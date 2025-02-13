@@ -13,26 +13,16 @@ body {
 .container {
   width: 92%;
   margin: auto;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact-container {
   height: 100vh;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
 }
 
 .contact-left {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+  gap: 25px;
   border: none;
   padding: 20px;
   border-radius: 10px;
@@ -44,9 +34,10 @@ body {
   font-size: 2.2rem;
   color: rgb(0, 89, 255);
   margin-bottom: 0px;
+  text-align: center;
 }
 
-input {
+input.contact-inputs {
   font-family: "Poppins", sans-serif;
   border: none;
   border-radius: 5px;
@@ -58,7 +49,7 @@ input {
   box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.116);
 }
 
-textarea {
+textarea.contact-inputs {
   padding-right: 72px;
   padding-left: 10px;
   padding-top: 10px;
@@ -77,6 +68,9 @@ a button {
   border-radius: 5px;
   padding: 5px 15px;
   box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.158);
+  margin-left: 75px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 a button:hover {
@@ -112,14 +106,21 @@ a button:active {
 }
 
 @media (min-width: 1200px) {
+  .contact-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
   .container {
     width: 1140px;
   }
 
   .contact-left-title h2 {
-    font-size: 3rem
+    font-size: 3rem;
   }
-
+  
   .contact-right {
     display: inline-block;
   }
@@ -129,4 +130,9 @@ a button:active {
     border: none;
     box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.281);
   }
+
+  a button {
+    margin-left: 0px;
+  }
+  
 }
